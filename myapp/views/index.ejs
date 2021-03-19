@@ -1,15 +1,17 @@
-<% include head.ejs %>
+<%- include('head.ejs') %>
 
-<h1>Stories</h1>
-<% for(var i = 0; i < stories.length; i++) {%>
-<a href="/stories/<%= stories[i].verhaalId%>">
-  <article>
-    <header>
-      <h1><%= stories[i].sfeerwoord %></h1>
-    </header>
-
-    <img src="https://blokweb.org/uploads/<%= stories[i].imgSmall %>" alt="<%= stories[i].sfeerwoord %>">
-
-  </article>
-</a>
-<% } %>
+    <% data.forEach(dag => { %>
+      <a href="/date/<%= dag.date %>">test</a>
+      <article>
+        <%if (dag.mediaType == "video") { %>
+          <iframe src="<%= dag.url %>" alt="">
+        <% } else{ %>
+          <img src="<%= dag.url %>">
+        <% } %>
+        <p><%= dag.title %></p>
+        <!-- <a href="/detail">detailpagina</a> -->
+        <br><br><br><br><br><br><br><br>
+      </article>
+    <% }) %>
+  </body>
+</html>

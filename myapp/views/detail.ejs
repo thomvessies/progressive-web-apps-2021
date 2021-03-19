@@ -1,9 +1,10 @@
-<% include head.ejs %>
+<%- include('head.ejs') %>
+    <article>
+      <header>
+        <h1><%= data.title %></h1>
+      </header>
 
-<article>
-  <header>
-    <h1><%= story.sfeerwoord %></h1>
-  </header>
-
-  <img src="https://blokweb.org/uploads/<%= story.imgSmall %>" alt="<%= story.sfeerwoord %>">
-</article>
+      <img src="<%= data.url %>" alt="<%= data.title %>">
+    </article>
+  </body>
+</html>
