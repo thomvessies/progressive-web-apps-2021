@@ -1,3 +1,11 @@
-html {
-    background: rgb(86, 86, 255);
+body {
+    background: rgb(255, 255, 0);
+}
+
+article{
+    background:rgb(0, 255, 21);
+}
+
+article > div {
+    float:left; display:inline; width: 49%;
 }

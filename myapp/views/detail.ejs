@@ -1,10 +1,18 @@
-<%- include('head.ejs') %>
+<%- include('./partials/head.ejs') %>
     <article>
       <header>
         <h1><%= data.title %></h1>
       </header>
 
-      <img src="<%= data.url %>" alt="<%= data.title %>">
+      <article>
+        <div>
+          <img src="<%= data.url %>" alt="<%= data.title %>">
+        </div>
+        <div>
+          <p><%= data.explanation %></p>
+        </div>
+      </article>
+
+      <div><a href="/">terug</a></div>
     </article>
-  </body>
-</html>
+    <%- include('./partials/footer.ejs') %>

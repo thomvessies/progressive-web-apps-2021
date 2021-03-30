@@ -9,6 +9,4 @@ async function sendApiRequest(){
   return data
 }
 
-
-
 module.exports = {sendApiRequest}

@@ -1,7 +1,6 @@
-<%- include('head.ejs') %>
-
+<%- include('./partials/head.ejs') %>
     <% data.forEach(dag => { %>
-      <a href="/date/<%= dag.date %>">test</a>
+      <a href="/date/<%= dag.date %>"><%= dag.title %></a>
       <article>
         <%if (dag.mediaType == "video") { %>
           <iframe src="<%= dag.url %>" alt="">
@@ -13,5 +12,4 @@
         <br><br><br><br><br><br><br><br>
       </article>
     <% }) %>
-  </body>
-</html>
+    <%- include('./partials/footer.ejs') %>

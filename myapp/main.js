@@ -1,14 +1,14 @@
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 5000;
 const fetch = require('node-fetch');
 const API_KEY = "P3unXRlp7hkIU9gPyyZQu0xCiVuEXcsTzzRgCAhD"
 
 
 // Using static files from static directory
 app.use(express.static('public'));
-app.use('/js', express.static(__dirname + 'public/js'));
-app.use('/img', express.static(__dirname + 'public/img'));
+app.use('/js', express.static(__dirname + '/public/js'));
+app.use('/img', express.static(__dirname + '/public/img'));
 app.use('/css', express.static(__dirname + 'public/css'));
 
 // Setting views (EJS)
@@ -34,6 +34,12 @@ app.get('/date/:date', function (req, res) {
       console.log(data)
       res.render('detail.ejs', { data });
     })
+});
+
+app.get('/offline', (req, res) => {
+  res.render('offline.ejs', {
+    pageTitle: `Offline`
+  })
 });
 
 app.listen(port, () => console.log(`App is running on port ${port}`));
