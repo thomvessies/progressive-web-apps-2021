@@ -4,7 +4,6 @@ const port = 5000;
 const fetch = require('node-fetch');
 const API_KEY = "P3unXRlp7hkIU9gPyyZQu0xCiVuEXcsTzzRgCAhD"
 
-
 // Using static files from static directory
 app.use(express.static('public'));
 app.use('/js', express.static(__dirname + '/public/js'));
@@ -16,21 +15,21 @@ app.set('views', './views');
 app.set('view engine', 'ejs');
 
 app.get('/', async (req, res) => {
-  var API_url = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&start_date=2021-03-10`
+  let API_url = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&start_date=2021-03-10`
     fetch(API_url)
     .then(resp => resp.json())
     .then(apidata => {
-      var data = apidata
+      let data = apidata
       res.render('index.ejs', { data });
     })
 });
 
 app.get('/date/:date', function (req, res) {
-  var API_url = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${req.params.date}`
+  let API_url = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&date=${req.params.date}`
   fetch(API_url)
     .then(resp => resp.json())
     .then(apidata => {
-      var data = apidata
+      let data = apidata
       console.log(data)
       res.render('detail.ejs', { data });
     })
