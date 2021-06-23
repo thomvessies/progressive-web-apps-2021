@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-const port = 5432;
+// const port = 5432;
+const PORT = process.env.PORT || 5432;
 const fetch = require('node-fetch');
 const path = require('path');
 const API_KEY = "P3unXRlp7hkIU9gPyyZQu0xCiVuEXcsTzzRgCAhD"
@@ -46,4 +47,4 @@ app.get('/offline', (req, res) => {
   })
 });
 
-app.listen(port, () => console.log(`App is running on port ${port}`));
+app.listen(PORT, () => console.log(`App is running on port ${PORT}`));
