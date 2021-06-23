@@ -1,0 +1,19 @@
+<%- include('./partials/head.ejs') %>
+  <section class="container">
+    <% data.forEach(dag => { %>
+      <h2><%= dag.title %></h2>
+      <article class="dag">
+        <a href="/date/<%= dag.date %>"><%= dag.title %></a>
+        <%if (dag.mediaType == "video") { %>
+          <iframe src="<%= dag.url %>" alt="">
+        <% } else{ %>
+          <img src="<%= dag.url %>">
+        <% } %>
+        
+        <!-- <a href="/detail">detailpagina</a> -->
+        <br><br><br><br><br><br><br><br>
+      </article>
+    <% }) %>
+  </section>
+  <%- include('./partials/footer.ejs') %>
+  

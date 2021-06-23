@@ -1,0 +1,32 @@
+body {
+    background: rgb(0, 0, 0);
+}
+
+article{
+    
+}
+
+article > div {
+    float:left; display:inline; width: 49%;
+}
+
+.container {
+    background:rgb(0, 25, 125);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.dag {
+    height: 90%;
+    width: 100%;
+}
+
+.dag:empty {
+    height: 100px;
+}
+
+a {
+    color: yellow;
+}
