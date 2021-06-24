@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-// const port = 5432;
 const PORT = process.env.PORT || 5432;
 const fetch = require('node-fetch');
 const path = require('path');
