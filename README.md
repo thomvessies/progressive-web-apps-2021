@@ -1,6 +1,6 @@
 # Progressive Web App -- NASA Astronomy Picture Of the Day
 
-### Livestream
+### Live versie
 https://apodpwa.herokuapp.com/
 
 
