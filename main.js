@@ -6,7 +6,7 @@ const path = require('path');
 const API_KEY = "P3unXRlp7hkIU9gPyyZQu0xCiVuEXcsTzzRgCAhD"
 
 // Using static files from static directory
-app.use('/public', express.static(path.resolve('public')))
+app.use('/', express.static(path.resolve('public')))
 
 // app.use(express.static('public'));
 // app.use('/js', express.static(__dirname + '/public/js'));
