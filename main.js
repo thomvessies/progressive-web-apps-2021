@@ -20,7 +20,7 @@ app.set('view engine', 'ejs').set('views', './views');
 // app.set('view engine', 'ejs');
 
 app.get('/', async (req, res) => {
-  let API_url = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&start_date=2021-06-10`
+  let API_url = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}&start_date=2021-06-20`
     fetch(API_url)
     .then(resp => resp.json())
     .then(apidata => {
