@@ -1,13 +1,13 @@
 <%- include('./partials/head.ejs') %>
   <section class="container">
-    <% data.forEach(dag => { %>
+    <% days.forEach(day => { %>
       <article class="dag">
-        <h2><%= dag.title %></h2>
-        <a href="/date/<%= dag.date %>">
-        <%if (dag.media_type == "video") { %>
-          <iframe src="<%= dag.url %>" alt="">
+        <h2><%= day.title %></h2>
+        <a href="/date/<%= day.date %>">
+        <%if (day.media_type == "video") { %>
+          <iframe src="<%= day.url %>" alt="">
         <% } else{ %>
-          <img src="<%= dag.url %>">
+          <img src="<%= day.url %>">
         <% } %>
       </a>
       </article>
